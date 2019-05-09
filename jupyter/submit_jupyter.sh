@@ -33,5 +33,5 @@ module unload miniconda2
 module load anaconda3
 
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"
-jupyter-notebook --no-browser --port=${port} --ip=${node}
+jupyter-lab --no-browser --port=${port} --ip=${node}
 
