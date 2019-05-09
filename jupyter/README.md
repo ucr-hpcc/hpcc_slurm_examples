@@ -1,5 +1,5 @@
 # Jupyter Example
-First review the following method, [https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html#web-browser-access](HPCC Web Browser Access)
+First review the following method, (https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html#web-browser-access)[HPCC Web Browser Access]
 After you have read through that, you can procceed with this example.
 
 Download the Jupter submission script:
