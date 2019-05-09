@@ -1,0 +1,13 @@
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+1
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+2
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+3
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+4
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+5
+srun_cr: fatal: failed to initialize libcr: Function not implemented
+6
+slurmstepd-i25: error: *** JOB 2963306 ON i25 CANCELLED AT 2018-08-08T17:05:47 ***

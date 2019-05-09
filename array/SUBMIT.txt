@@ -1,0 +1,1 @@
+sbatch --array=1-10 -N 1 test_job.sh

@@ -1,0 +1,28 @@
+
+MacOS or linux terminal command to create your ssh tunnel:
+ssh -N -L 8726:i16:8726 jhayes@cluster.hpcc.ucr.edu
+
+MS Windows MobaXterm info:
+
+Forwarded port:same as remote port
+Remote server: i16
+Remote port: 8726
+SSH server: ib.hpc.yale.edu
+SSH login: jhayes
+SSH port: 22
+
+
+PLEASE USE GENERATED URL BELOW IN BROWSER
+YOU MUST REPLACE 'i16' with 'localhost'
+[I 12:40:22.789 NotebookApp] JupyterLab beta preview extension loaded from /opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/lib/python3.6/site-packages/jupyterlab
+[I 12:40:22.790 NotebookApp] JupyterLab application directory is /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/anaconda3/4.5.4/share/jupyter/lab
+[I 12:40:22.803 NotebookApp] Serving notebooks from local directory: /bigdata/operations/jhayes/Projects/slurm/jupyter
+[I 12:40:22.803 NotebookApp] 0 active kernels
+[I 12:40:22.803 NotebookApp] The Jupyter Notebook is running at:
+[I 12:40:22.803 NotebookApp] http://i16:8726/?token=ae2e43d9c45aac71240bdb33774dd3ddb75484ba1a70a205
+[I 12:40:22.803 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 12:40:22.806 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://i16:8726/?token=ae2e43d9c45aac71240bdb33774dd3ddb75484ba1a70a205&token=ae2e43d9c45aac71240bdb33774dd3ddb75484ba1a70a205

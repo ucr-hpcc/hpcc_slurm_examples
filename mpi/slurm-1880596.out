@@ -1,0 +1,17 @@
+  Process   Process 1 says 'Hello, world!'
+2 says 'Hello, world!'
+28 March 2018 12:15:18 PM
+
+HELLO_MPI - Master process:
+  C++/MPI version
+  An MPI example program.
+
+  The number of processes is 3
+
+  Process 0 says 'Hello, world!'
+  Elapsed wall clock time = 1.14441e-05 seconds.
+
+HELLO_MPI:
+  Normal end of execution.
+
+28 March 2018 12:15:18 PM

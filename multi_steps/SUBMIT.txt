@@ -1,0 +1,4 @@
+# First, request resources
+    salloc -N 10 bash
+# After resources have been granted, you can issue srun commands to run on the cluster
+    srun hostname

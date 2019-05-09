@@ -1,0 +1,12 @@
+[1] "We are assigned 9 processes"
+	9 slaves are spawned successfully. 0 failed.
+[1] "Hello from i33 with CPU type x86_64" "Hello from i33 with CPU type x86_64"
+[3] "Hello from i33 with CPU type x86_64" "Hello from i33 with CPU type x86_64"
+[5] "Hello from i33 with CPU type x86_64" "Hello from i33 with CPU type x86_64"
+[7] "Hello from i33 with CPU type x86_64" "Hello from i33 with CPU type x86_64"
+[9] "Hello from i33 with CPU type x86_64"
+[1] -2177.028
+   user  system elapsed 
+  5.220   0.296   5.514 
+slurmstepd-i33: error: *** JOB 688508 ON i33 CANCELLED AT 2017-05-04T11:49:44 DUE TO TIME LIMIT ***
+mpirun: Forwarding signal 18 to job

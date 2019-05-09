@@ -1,0 +1,11 @@
+#!/bin/bash -l
+
+count=0
+echo "$count" > count.log
+while [ 1 -eq 1 ]; do
+    count=$(($count+1))
+    sleep 10
+    echo "$count" >> count.log
+done
+
+echo "Completed $count"

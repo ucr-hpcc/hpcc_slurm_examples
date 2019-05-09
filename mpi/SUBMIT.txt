@@ -1,0 +1,6 @@
+srun --pty -n 10 bash -l
+
+OR
+
+srun -p short --ntasks 64 -N 2 --switches=1@1-00:00:00 --pty bash -l
+
