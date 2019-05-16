@@ -7,6 +7,9 @@
 #SBATCH --job-name=jupyter-notebook
 #SBATCH --output=jupyter-notebook-%J.log
 
+# Jupyter vars
+XDG_RUNTIME_DIR=""
+
 # Get tunneling info
 port=$(shuf -i8000-9999 -n1)
 node=$(hostname -s)
