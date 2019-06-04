@@ -7,6 +7,12 @@
 #SBATCH --job-name=jupyter-notebook
 #SBATCH --output=jupyter-notebook-%J.log
 
+# Change to HOME dir to give access to all folders within Jupyter-Lab
+cd $HOME
+
+# Jupyter vars
+XDG_RUNTIME_DIR=""
+
 # Get tunneling info
 port=$(shuf -i8000-9999 -n1)
 node=$(hostname -s)
@@ -34,4 +40,6 @@ module load anaconda3
 
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"
 jupyter-lab --no-browser --port=${port} --ip=${node}
+# Comment out the line above and uncomment the line below if you would like jupyter-notebook instead of jupyter-lab
+#jupyter-notebook --no-browser --port=${port} --ip=${node}
 
