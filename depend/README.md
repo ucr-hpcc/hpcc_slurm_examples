@@ -28,4 +28,10 @@ sleep 60
 
 ```
 
-This example is a simple linear chain of dependancies, not a more complex dependeancy structure like a tree.
+# Complex Example
+This example is a simple linear chain of dependancies (max 3 jobs):
+
+```batch
+sbatch test_job.sh
+```
+
