@@ -18,5 +18,3 @@ date
 # Load matlab
 module load matlab/r2018a
 matlab -nodisplay -nosplash <ssfres_normal_thermal_resonance_shift_trans_adapt_04_QingOptica_1e3.m> run.log
-module purge
-exit
