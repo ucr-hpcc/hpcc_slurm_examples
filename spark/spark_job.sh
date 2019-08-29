@@ -23,7 +23,7 @@ cd $SLURM_WORKING_DIR
 # Assign location to Spark home var
 export SPARK_HOME=/rhome/jhayes/shared/pkgs/spark/2.4.0-bin-hadoop2.7
 # Log into first node and start master Spark process
-ssh ${nodes[0]}.ib.int.bioinfo.ucr.edu "module load java/8u45; cd ${SPARK_HOME}; ./sbin/start-master.sh"
+ssh ${nodes[0]}.ib.hpcc.ucr.edu "module load java/8u45; cd ${SPARK_HOME}; ./sbin/start-master.sh"
 sparkmaster="spark://${nodes[0]}:7077"
 
 # Assign location to scratch var
@@ -35,7 +35,7 @@ rm -f ${SCRATCH}/work/nohup*.out
 
 # On each node, start Spark worker
 for i in $( seq 0 $last ); do
-        ssh ${nodes[$i]}.ib.int.bioinfo.ucr.edu "cd ${SPARK_HOME}; module load java/8u45; nohup ./bin/spark-class org.apache.spark.deploy.worker.Worker ${sparkmaster} &> ${SCRATCH}/work/nohup-${nodes[$i]}.out" &
+        ssh ${nodes[$i]}.ib.hpcc.ucr.edu "cd ${SPARK_HOME}; module load java/8u45; nohup ./bin/spark-class org.apache.spark.deploy.worker.Worker ${sparkmaster} &> ${SCRATCH}/work/nohup-${nodes[$i]}.out" &
 done
 
 # Remove old results, if it exists
@@ -60,11 +60,11 @@ ${SPARK_HOME}/bin/spark-submit --master ${sparkmaster} sparkscript.py
 # https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html
 
 # Stop Spark master process
-ssh ${nodes[0]}.ib.int.bioinfo.ucr.edu "module load java/8u45; cd ${SPARK_HOME}; ./sbin/stop-master.sh"
+ssh ${nodes[0]}.ib.hpcc.ucr.edu "module load java/8u45; cd ${SPARK_HOME}; ./sbin/stop-master.sh"
 # Stop worker process
 for i in $( seq 0 $last ); do
     # This kills all java processes, maybe better if we killed specific process IDs?
-    ssh ${nodes[$i]}.ib.int.bioinfo.ucr.edu "killall java"
+    ssh ${nodes[$i]}.ib.hpcc.ucr.edu "killall java"
     done
 wait
 
