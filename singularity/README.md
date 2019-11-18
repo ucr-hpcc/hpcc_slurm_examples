@@ -22,7 +22,7 @@ cp /path/to/contig.fasta data/contig.fasta
 ```
 
 ## Submit
-Once you have setup you job you can submit it to the cluster with the following command:
+Once you have setup your data directory, you can submit your job to the cluster with the following command:
 
 ```bash
 wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/singularity/metaerg_job.sh 
