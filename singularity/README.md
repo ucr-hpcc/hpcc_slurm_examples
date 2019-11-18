@@ -11,7 +11,7 @@ cd ~/bigdata/metaerg
 
 Ensure that you have a directory called `data` in the current directory:
 
-```
+```bash
 mkdir data
 ```
 
