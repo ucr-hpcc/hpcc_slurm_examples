@@ -2,7 +2,7 @@
 
 Load the module
 
-``bash
+```bash
 module load deepvariant
 ```
 
