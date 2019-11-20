@@ -11,7 +11,7 @@ cd ~/bigdata/metaerg
 
 Ensure that you have a directory called `data` in the current directory:
 
-```
+```bash
 mkdir data
 ```
 
@@ -21,11 +21,19 @@ Also ensure that you have a fasta file called `contig.fasta` in the `data` direc
 cp /path/to/contig.fasta data/contig.fasta
 ```
 
-## Submit
-Once you have setup you job you can submit it to the cluster with the following command:
+## Script
+In order to submit this job in a non-interactive way, we will need to create a submission script.
+Download the submission script and edit based on your needs:
 
 ```bash
-wegt https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/singularity/metaerg_job.sh 
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/singularity/metaerg_job.sh
+nano metaerg_job.sh # You could also use vim/emacs or other text editor
+```
+
+## Submit
+Once you have setup your data directory and updated your submission script, you can submit your job to the cluster with the following command:
+
+```bash
 sbatch metaerg_job.sh
 ```
 
