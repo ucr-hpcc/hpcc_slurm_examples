@@ -20,3 +20,5 @@ Then submit this just like any other job, like so:
 sbatch start_mariadb.sh
 ```
 
+After running the startup job you should have a log file called `mariadb.log` in the directory where you created your `mariadb.sif` file.
+This log file should contain the host and the port where your job is running, which can be used for your database connections.
