@@ -13,11 +13,11 @@
 module load singularity
 
 # Move to where your mariadb.sif image lives
-cd ~/bigdata/mariadb/
+cd ~/bigdata/mysql/
 
-# Save file to indicate where mariadb is running
-echo $HOSTNAME > mariadb.log
-ps aux | grep "$USER.*mysql.*port.*" | grep -Po 'port=[0-9]{4}' | cut -d '=' -f2 >> mariadb.log
+# Get port and host name info and save it to a file
+PORT=$(singularity exec --writable-tmpfs -B db/:/var/lib/mysql mariadb.sif grep -oP '^port = \K\d{4}' /etc/mysql/my.cnf | head -1)
+echo $HOSTNAME $PORT > db_host_port.txt
 
 # Start your mariadb like a service
-singularity instance start --writable-tmpfs -B db/:/var/lib/mysql mariadb.sif mysqldb
+singularity exec --writable-tmpfs -B db/:/var/lib/mysql mariadb.sif /usr/bin/mysqld_safe
