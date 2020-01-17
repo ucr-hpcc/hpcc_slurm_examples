@@ -16,7 +16,7 @@ mkdir ${GAUSS_SCRDIR}
 cd ~/bigdata/Projects/gaussian/
 
 # Run Gaussian
-g09 ch4_opt.gjf
+g16 ch4_opt.gjf
 
 # Delete old temp files
 rm -rf ${GAUSS_SCRDIR}
