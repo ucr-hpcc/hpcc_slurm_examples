@@ -3,7 +3,6 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=10G
-##SBATCH -o my_output_%j
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=useremail@address.com
 #SBATCH --time=70:00:00
