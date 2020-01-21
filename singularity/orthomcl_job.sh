@@ -5,9 +5,9 @@
 #SBATCH --mem=10G
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=useremail@address.com
-#SBATCH --time=2:00:00
+#SBATCH --time=4:00:00
 #SBATCH --job-name=orthomcl
-#SBATCH -p short
+#SBATCH -p intel
 
 module load singularity
 module load orthomcl
