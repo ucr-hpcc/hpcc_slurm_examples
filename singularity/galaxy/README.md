@@ -1,13 +1,24 @@
 # Galaxy
 
-> TODO: Note that this is a work in progress.
+> Deprecated: Singularity is not required to install Galaxy, use conda instead [Galaxy via Conda](../../galaxy).
 
 ## Prep Workspace
 
 Since `Galaxy` requires write access to the `config` and `database` direcotries we need to copy them out of the container.
 Once we have copies of these directories we will then mount them inside the container.
 
+### Create Galaxy Home
+
+Create a home base for Galaxy:
+
+```
+mkdir -p bigdata/galaxy/20.05
+cd bigdata/galaxy/20.05
+```
+
 #### Copy Files from Container
+
+Copy databases and configs from in the container to Galaxy home:
 
 ```
 module load galaxy
@@ -35,8 +46,24 @@ grep '^\s.*admin_users' config/galaxy.yml
 
 ## Run Galaxy Job
 
+### Startup Script
+
+Download startup script:
+
 ```
-sbatch -p short -c 24 --mem=100gb --job-name='galaxy' --wrap='module load galaxy; galaxy'
+wget https://github.com/ucr-hpcc/hpcc_slurm_examples/blob/master/singularity/galaxy/start_galaxy.sh
+```
+
+Use nano or vim to edit script to use proper paths:
+
+```
+vim start_galaxy.sh
+```
+
+Then submit the script like so:
+
+```
+sbatch -p short -c 24 --mem=100gb start_galaxy.sh
 ```
 
 ## SSH Tunnel
