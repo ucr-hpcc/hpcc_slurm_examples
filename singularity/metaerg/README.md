@@ -26,7 +26,7 @@ In order to submit this job in a non-interactive way, we will need to create a s
 Download the submission script and edit based on your needs:
 
 ```bash
-wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/singularity/metaerg_job.sh
+wget https://github.com/ucr-hpcc/hpcc_slurm_examples/blob/master/singularity/metaerg/metaerg_job.sh
 nano metaerg_job.sh # You could also use vim/emacs or other text editor
 ```
 
