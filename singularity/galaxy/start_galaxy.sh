@@ -1,8 +1,13 @@
 #!/bin/bash -l
-module load singularity
+
+# Load Galaxy
+module load galaxy
+
+# Set Galaxy Home
+GALAXY_HOME=~/bigdata/galaxy/20.05
 
 singularity exec \
-    -B /YOUR_COPY_OF_GALAXY/database:/opt/galaxy/20.05/database \
-    -B /YOUR_COPY_OF_GALAXY/config:/opt/galaxy/20.05/config galaxy.sing \
+    -B $GALAXY_HOME/database:/opt/galaxy/20.05/database \
+    -B $GALAXY_HOME/config:/opt/galaxy/20.05/config \
+    $GALAXY_IMG \
     /opt/galaxy/20.05/run.sh
-
