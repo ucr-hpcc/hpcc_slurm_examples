@@ -21,4 +21,4 @@ sbatch -p short -c 24 --mem=100gb --job-name='galaxy' --wrap='module load galaxy
 
 ## SSH Tunnel
 
-After the galaxy job has started collect the node and port details and follow these instructions [https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html#web-browser-access](Web Browser Access).
+After the galaxy job has started collect the node and port details and follow these instructions [Web Browser Access](https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html#web-browser-access).
