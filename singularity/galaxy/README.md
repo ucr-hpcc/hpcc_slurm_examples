@@ -1,6 +1,6 @@
 # Galaxy
 
-TODO >> Note that this is a work in progress.
+> TODO: Note that this is a work in progress.
 
 ## Prep Workspace
 
