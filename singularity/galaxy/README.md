@@ -23,7 +23,7 @@ Copy databases and configs from in the container to Galaxy home:
 ```
 module load galaxy
 singularity exec $GALAXY_IMG rsync -r /opt/galaxy/config/ $PWD/config
-singularity exec $GALAXY_IMG rsync -r /opt/galaxy/database/ $PWD/config
+singularity exec $GALAXY_IMG rsync -r /opt/galaxy/database/ $PWD/database
 ```
 
 #### Configure Galaxy
