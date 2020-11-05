@@ -1,6 +1,6 @@
 # Galaxy
 
-Outlined beloew is how to install Galaxy using conda and then run subsequent jobs.
+Outlined below is how to install Galaxy using conda and then run subsequent jobs.
 Please note that differring version of conda may cause issues, please stay with the default `miniconda2`.
 
 ## Prep
