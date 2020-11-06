@@ -34,12 +34,13 @@ SSH login: $user
 SSH port: 22
 "
 
-# load modules or conda environments here
-module unload miniconda2
-module load anaconda3
+####################################################
+# Load modules or activate conda environments here #
+####################################################
 
+# Print instructions to user
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"
-jupyter-lab --no-browser --port=${port} --ip=${node}
-# Comment out the line above and uncomment the line below if you would like jupyter-notebook instead of jupyter-lab
-#jupyter-notebook --no-browser --port=${port} --ip=${node}
 
+# Launch Jupyter lab or notebook
+jupyter-lab --no-browser --port=${port} --ip=${node}
+#jupyter-notebook --no-browser --port=${port} --ip=${node}
