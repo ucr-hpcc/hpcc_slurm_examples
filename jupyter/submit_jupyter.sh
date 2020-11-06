@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH --partition=short
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
