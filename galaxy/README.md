@@ -34,5 +34,5 @@ To run we will need to submit a new job, like this:
 
 ```bash
 cd ~/bigdata/galaxy/20.05
-sbatch -p short -c 4 --mem=10g --wrap='./run.sh start'
+sbatch -p short -c 4 --mem=10g --wrap='./run.sh start; sleep infinity;'
 ```
