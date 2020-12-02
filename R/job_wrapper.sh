@@ -2,7 +2,7 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=10G
 #SBATCH --time=1-00:15:00     # 1 day and 15 minutes
 #SBATCH --mail-user=useremail@address.com
