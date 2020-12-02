@@ -4,7 +4,7 @@ This is a basic example on how to submit Python code to the cluster.
 
 Make sure your `job_wrapper.sh` and `myPyscript.py` files are in the same directory, and then submit your wrapper from that directory:
 
-```
+```bash
 # Make example directory
 mkdir ~/py_example
 cd ~/py_example
