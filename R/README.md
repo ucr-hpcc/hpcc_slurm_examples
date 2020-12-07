@@ -10,8 +10,8 @@ mkdir ~/R_example
 cd ~/R_example
 
 # Download example scripts
-wget https://github.com/ucr-hpcc/hpcc_slurm_examples/blob/master/R/job_wrapper.sh
-wget https://github.com/ucr-hpcc/hpcc_slurm_examples/blob/master/R/myRscript.R
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/R/job_wrapper.sh
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/R/myRscript.R
 
 # Submit wrapper
 sbatch job_wrapper.sh
