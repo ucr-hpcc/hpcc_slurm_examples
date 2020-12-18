@@ -9,6 +9,6 @@
 ##SBATCH --mail-type=ALL
 ##SBATCH --job-name="just_a_test"
 
-srun date
-srun sleep 60
-srun hostname
+date
+sleep 60
+hostname
