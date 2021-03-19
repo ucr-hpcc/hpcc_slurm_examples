@@ -1,12 +1,13 @@
 #!/bin/bash -l
 
-#SBATCH -c 32              # Request all CPUs
-#SBATCH --mem=108g         # RAM is calculated: 9GB x #CPUs
-#SBATCH --time=2-00:00:00  # Run for 2 days
-#SBATCH -p gpu             # Submit to GPU partition
-#SBATCH --gpus=4           # Request 4 GPUs
-#SBATCH --nodelist=gpu02   # Request specific node
-#SBATCH --exclusive        # This job gets whole node
+#SBATCH -c 32                  # Request all CPUs, use only: floor(AVAIL_RAM_GB/9)
+#SBATCH --mem=108g             # Request RAM, calculated by: floor(AVAIL_RAM_GB/9)*9
+#SBATCH --time=2-00:00:00      # Run for 2 days
+#SBATCH -p gpu                 # Submit to GPU partition
+#SBATCH --gpus=4               # Request 4 GPUs
+##SBATCH --nodelist=gpu01       # Request specific node
+#SBATCH --exclude=gpu[03-05]   # Exclude heterogeneous nodes
+#SBATCH --exclusive            # This job gets whole node
 
 # Load software
 module load gaussian/16
