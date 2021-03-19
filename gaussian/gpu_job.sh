@@ -6,6 +6,7 @@
 #SBATCH -p gpu             # Submit to GPU partition
 #SBATCH --gpus=4           # Request 4 GPUs
 #SBATCH --nodelist=gpu02   # Request specific node
+#SBATCH --exclusive        # This job gets whole node
 
 # Load software
 module load gaussian/16
