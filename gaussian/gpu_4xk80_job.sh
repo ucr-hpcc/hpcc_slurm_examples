@@ -10,7 +10,7 @@
 #SBATCH --exclusive            # This job gets whole node
 
 # Load software
-module load gaussian/16
+module load gaussian/16_AVX2
 
 # Create temp directory
 export GAUSS_SCRDIR=/scratch/${USER}/${SLURM_JOB_ID}
