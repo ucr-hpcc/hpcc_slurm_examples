@@ -37,6 +37,9 @@ SSH port: 22
 ####################################################
 # Load modules or activate conda environments here #
 ####################################################
+module unload miniconda2
+module load miniconda3
+conda activate jupyter
 
 # Print instructions to user
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"
