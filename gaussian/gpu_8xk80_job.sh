@@ -6,7 +6,7 @@
 #SBATCH -p gpu                            # Submit to GPU partition
 #SBATCH --gpus=8                          # Request 4 GPUs
 ##SBATCH --nodelist=gpu01                  # Request specific node
-#SBATCH --exclude=gpu[01-02],gpu[03-05]   # Exclude heterogeneous nodes
+#SBATCH --exclude=gpu[01-02],gpu05        # Exclude heterogeneous nodes
 #SBATCH --exclusive                       # This job gets whole node
 
 # Load software
