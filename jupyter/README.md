@@ -80,7 +80,7 @@ Check the state of your job:
 squeue -u $USER
 ```
 
-If your job has started, then you can check the log to see verfiy that your script is running:
+If your job has started, then you can check the log to verfiy that your script is running:
 ```
 cat jupyter-notebook-12345678.log
 ```
