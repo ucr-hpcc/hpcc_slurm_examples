@@ -4,10 +4,15 @@
 
 There are 3 ways to run Jupyter Notebooks:
   1. __[JupyterHub](https://jupyter.hpcc.ucr.edu) server__
+
      This method is the easist, however resources are limited thus only used for light testing.
+
   2. __Interactively as a Job__
+
      This method is the most difficult, however it provides a way to request more resources than JupyterHub.
+
   3. __Non-Interactively as a Job__
+
      This method is not difficult, in fact it is the same method we use for submitting most jobs on the cluster.
 
 ## Workflow
