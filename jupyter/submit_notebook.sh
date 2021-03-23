@@ -7,17 +7,16 @@
 #SBATCH --job-name=jupyter-notebook
 #SBATCH --output=jupyter-notebook-%J.log
 
-# Jupyter vars
-XDG_RUNTIME_DIR=""
-
-####################################################
-# Load modules or activate conda environments here #
-####################################################
-module unload miniconda2
+# Load and activate jupyter conda environment
+module unload anaconda3
 module load miniconda3
 conda activate jupyter
 
-# Launch Jupyter lab or notebook
-# Example below runs the notebook.ipynb and output to a file call notebook, it will append the .html suffix automatically
-# To see a full list of option run 'jupyter nbconvert --help-all'
-jupyter nbconvert --to html --execute notebook.ipynb --output notebook
+
+# Execute the notebook and generate HTML (notebook.html) as output file
+jupyter nbconvert --to html --execute notebook.ipynb
+# OR execute the notebook and generate another notebook (notebook.nbconvert.ipynb) as output file
+#jupyter nbconvert --to notebook --execute notebook.ipynb
+
+# There are many output formats, list all possible options with this
+#jupyter nbconvert --help-all
