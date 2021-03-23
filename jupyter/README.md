@@ -53,3 +53,28 @@ cat jupyter-notebook-*.log
 ```
 
 ## Non-Interactive as a Job
+
+Download the Jupyter submission script:
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/jupyter/submit_notebook.sh
+```
+
+Edit script with proper Slurm resources, and options for the jupyter command:
+```bash
+vim submit_notebook.sh
+```
+
+Submit the Jupyter job:
+```bash
+sbatch submit_jupyter.sh
+```
+
+Check for Jupyter job start time and log
+```bash
+squeue -u $USER --start
+```
+
+If your job has started, then check the log, which will contain the log of your running notebook:
+```
+cat jupyter-notebook-*.log
+```
