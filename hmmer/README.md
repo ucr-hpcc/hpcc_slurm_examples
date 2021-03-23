@@ -67,10 +67,12 @@ http://cryptogenomicon.org/hmmscan-vs-hmmsearch-speed-the-numerology.html
 Here is a script which will startup an MPI job, we are going to run hmmsearch instead of hmmscan and show how MPI can be used.
 This example is for a few proteins only, but the real speedup would be seen with a large genome or translated metagenome.
 
+See the script [pipeline/03_hmmsearch_MPI.sh](pipeline/03_hmmsearch_MPI.sh) for more details but it uses the `srun` command when launching the hmmsearch but the resources requested are in the `#SBATCH` or cmdline requested options which set the number of CPUs to use.
+
+The current example is a bit of a toy one but if you want to compare you can try running against a large protein DB and see the performance differences to standard multithreaded runs of hmmsearch or hmmscan searches.
 ```
 sbatch -p short pipeline/03_hmmsearch_MPI.sh
 ```
-
 
 AUTHORS
 ======
