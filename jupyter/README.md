@@ -42,46 +42,48 @@ Submit the Jupyter job:
 sbatch submit_jupyter.sh
 ```
 
-Check for Jupyter job start time and log
+Check for Jupyter job start time:
 ```bash
-squeue -u $USER --start
+squeue -u $USER -o '%i %j %S %Z'
 ```
 
-If your job has started, then check the log, which will contain the remainder of your instructions:
+If your job has already started, then check the log, which will contain the remainder of your instructions:
 ```
-cat jupyter-notebook-*.log
+cat jupyter-notebook-12345678.log
 ```
+Replace `12345678` with your real `JOBID` from the previous step.
 
 ## Non-Interactive as a Job
 
-Download the Jupyter submission script:
+Download the Jupyter Notebook (or create your own):
+```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/jupyter/notebook.ipynb
+```
+
+Download the notebook submission script:
 ```bash
 wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/jupyter/submit_notebook.sh
 ```
 
-To see more options for the jupyter command:
-```bash
-jupyter nbconvert --help-all
-```
-
-Edit script with proper Slurm resources, and options for the jupyter command:
+Edit script with proper Slurm resources, and options for your notebook:
 ```bash
 vim submit_notebook.sh
 ```
 
-Submit the Jupyter job:
+Submit the notebook job:
 ```bash
 sbatch submit_notebook.sh
 ```
 
-Check for Jupyter job start time and log
+Check the state of your job:
 ```bash
-squeue -u $USER --start
+squeue -u $USER
 ```
 
-If your job has started, then check the log, which will contain the log of your running notebook:
+If your job has started, then you can check the log to see verfiy that your script is running:
 ```
-cat jupyter-notebook-*.log
+cat jupyter-notebook-12345678.log
 ```
+Replace `12345678` with your real `JOBID` from the previous step.
 
-Once the job is finish, you can download and view your file at [JupyterHub](https://jupyter.hpcc.ucr.edu)
+Once the job has completed, you can download and view your HTML or Notebook results from the [JupyterHub](https://jupyter.hpcc.ucr.edu) server.
