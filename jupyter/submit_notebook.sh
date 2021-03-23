@@ -18,6 +18,6 @@ module load miniconda3
 conda activate jupyter
 
 # Launch Jupyter lab or notebook
-# Example below runs the notebook.ipynb and output to a file call notebook, it will append the .pdf suffix automatically
+# Example below runs the notebook.ipynb and output to a file call notebook, it will append the .html suffix automatically
 # To see a full list of option run 'jupyter nbconvert --help-all'
-jupyter nbconvert --to pdf --execute notebook.ipynb --output notebook
+jupyter nbconvert --to html --execute notebook.ipynb --output notebook

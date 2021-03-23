@@ -59,6 +59,11 @@ Download the Jupyter submission script:
 wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/jupyter/submit_notebook.sh
 ```
 
+To see more options for the jupyter command:
+```bash
+jupyter nbconvert --help-all
+```
+
 Edit script with proper Slurm resources, and options for the jupyter command:
 ```bash
 vim submit_notebook.sh
@@ -66,7 +71,7 @@ vim submit_notebook.sh
 
 Submit the Jupyter job:
 ```bash
-sbatch submit_jupyter.sh
+sbatch submit_notebook.sh
 ```
 
 Check for Jupyter job start time and log
@@ -78,3 +83,5 @@ If your job has started, then check the log, which will contain the log of your 
 ```
 cat jupyter-notebook-*.log
 ```
+
+Once the job is finish, you can download and view your file at [JupyterHub](https://jupyter.hpcc.ucr.edu)
