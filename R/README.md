@@ -24,4 +24,4 @@ wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/R/myR
 sbatch job_wrapper.sh
 ```
 
-> NOTE: When using a real analysis you will may need to adjust the SBATCH resource requests within the `job_wrapper.sh` before submitting it.
+> NOTE: When using a real R script will need to adjust the `SBATCH` resource requests within the `job_wrapper.sh` before submitting it.
