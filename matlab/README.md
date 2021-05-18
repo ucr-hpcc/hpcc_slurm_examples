@@ -1,24 +1,15 @@
+
 ## Simpler method: Submitting job from the cluster
 To submit a job from the cluster, you can use [submission_script.sh](submission_script.sh) or [submission_script2.sh](submission_script2.sh) as a starting point.
 ### How to login to the cluster
-#### Windows
-1.  Open MobaXTerm [Download MobaXTerm](https://mobaxterm.mobatek.net/download-home-edition.html)
-2.  Click on “Start local terminal” in the center of the window.
-
-#### Mac
-1.  Download and install [XQuartz](https://www.xquartz.org/), this is optional and only needed if you want X11 Forwarding.
-2.  Open Terminal or [iterm2](https://www.iterm2.com/downloads.html)
-
-#### Logging in
--   Now that you have a terminal open, execute the following on the command line: `ssh -X myusername@cluster.hpcc.ucr.edu`
-    `myusername` is your username on the cluster. You will be asked to enter your password. Simply type it (even if you cannot see anything) and press enter
+You can use this guide on how to login to the cluster https://hpcc.ucr.edu/manuals_linux-basics_intro#how-to-get-access
 
 ### How to copy the submission_script to the cluster
 There are multiple ways of doing this
 
 #### Copy and paste
 This involved you copying the text inside the [submission_script.sh](submission_script.sh) and pasting it into a file on the cluster.
-1. [Login to the cluster](#How-to-login-to-the-cluster)
+1. [Login to the cluster](https://hpcc.ucr.edu/manuals_linux-basics_intro#how-to-get-access)
 2. Once logged in you can run
 ```bash
 nano submission_script.sh
@@ -209,3 +200,4 @@ Each group is limited to a maximum of 8 GPUs on the gpu partition. Please be res
 Here are a few more examples of jobs that utilize more complex features (ie. array, dependency, MPI etc): [Slurm Examples](https://github.com/ucr-hpcc/hpcc_slurm_examples)
 ## Advance method: Submitting job from matlab to the cluster
 To submit a job from your matlab program to the cluster, you can view [Getting_Started_With_Serial_And_Parallel_MATLAB.pdf](Getting_Started_With_Serial_And_Parallel_MATLAB.pdf)
+If you are getting an error when running **configCluster**, run **rehash toolboxcache** and then run **configCluster** again.
