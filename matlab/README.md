@@ -7,15 +7,18 @@ You can use this guide on how to login to the cluster https://hpcc.ucr.edu/manua
 ### How to copy the submission_script to the cluster
 There are multiple ways of doing this
 
-#### Copy and paste
+#### Using wget
 This involved you copying the text inside the [submission_script.sh](submission_script.sh) and pasting it into a file on the cluster.
 1. [Login to the cluster](https://hpcc.ucr.edu/manuals_linux-basics_intro#how-to-get-access)
 2. Once logged in you can run
 ```bash
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/matlab/submission_script.sh
+```
+3. You can edit the file once it is downloaded using **nano**
+```bash
 nano submission_script.sh
 ```
-3. Right click on the terminal (mobaxterm, Terminal, or item2) and click on paste.
-4. If you are on windows, press **Ctrl+x** on windows, or **Command+x** on mac, and then press **y** and finally press **Enter**  to save.
+4. To save, if you are on windows, press **Ctrl+x** on windows, or **Command+x** on mac, and then press **y** and finally press **Enter**  to save.
 5. If you want to edit the file again, just run **nano** command on the file again.
 6. If you want to rename the file you can run
 ```bash
@@ -26,13 +29,7 @@ mv submission_script.sh some_new_name
 rm submission_script.sh
 ```
 #### Using a file transfer client
-1. Download [submission_script.sh](submission_script.sh) or [submission_script2.sh](submission_script2.sh) to your computer, and modify it to your need. You can view [Linux Cluster - Managing Jobs](https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html) for more information.
-2. Download [Filezilla](https://filezilla-project.org/) and install it on your computer.
-3. Start the Filezilla program on your computer.
-4. On top, there are a few area you can type in, set the **host** to **sftp://cluster.hpcc.ucr.edu**, and fill out username and password on the appropriate boxes.
-5. It might ask you if you want to save your password, I recommend that you don't save your password, by clicking on **Do not save passwords**
-6. On the left half of the Filezilla program are location on your computer, navigate to where you have downloaded [submission_script.sh](submission_script.sh) or [submission_script2.sh](submission_script2.sh).
-7. Once you have found the file [submission_script.sh](submission_script.sh) or [submission_script2.sh](submission_script2.sh) on your computer, you can drag it to the right side of Filezilla to transfer it over. You can do the same with your matlab script.
+You can view this [guide](https://hpcc.ucr.edu/manuals_linux-basics_filesystems.html) on how to transfer file using a client.
 
 ### Submitting a job
 #### What is a Job?
