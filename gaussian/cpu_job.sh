@@ -8,9 +8,9 @@
 # Load software
 module load gaussian/16
 
-# Create temp directory
-export GAUSS_SCRDIR=/scratch/${SLURM_JOB_ID}
-mkdir ${GAUSS_SCRDIR}
+# Set scratch directory
+export GAUSS_SCRDIR=/scratch/${USER}/${SLURM_JOB_ID}
+mkdir -p ${GAUSS_SCRDIR}
 
 # Move to working directory 
 cd ~/bigdata/Projects/gaussian/
