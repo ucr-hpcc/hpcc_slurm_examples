@@ -13,14 +13,11 @@
 module load gaussian/16_AVX2
 
 # Create temp directory
-export GAUSS_SCRDIR=/scratch/${USER}/${SLURM_JOB_ID}
-mkdir -p ${GAUSS_SCRDIR}
+module load workspace/scratch
+export GAUSS_SCRDIR=${SCRATCH}
 
 # Move to working directory 
 cd ~/bigdata/Projects/gaussian/gpu/
 
 # Run Gaussian on specific CPUs
 g16 -c="0-20" -m="189GB" -g="0-1=0,16" ch4_opt.gjf
-
-# Delete old temp files
-rm -rf ${GAUSS_SCRDIR}
