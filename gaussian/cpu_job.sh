@@ -5,8 +5,12 @@
 #SBATCH --time=2:00:00
 #SBATCH -p short
 
-# Load software
-module load gaussian/16
+# Load software based on CPU
+if [[ $(cpu_type) == "intel" ]] || [[ $(cpu_type) == "xeon" ]]; then
+    module load gaussian/16_AVX2
+else
+    module load gaussian/16_SSE4
+fi
 
 # Set scratch directory
 module load workspace/scratch
