@@ -14,8 +14,8 @@ cd ~/R_example
 2. Download example scripts
 
 ```bash
-wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/STATA/submit.sh
-wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/STATA/test.do
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/stata/submit.sh
+wget https://raw.githubusercontent.com/ucr-hpcc/hpcc_slurm_examples/master/stata/test.do
 ```
 
 3. Submit job
