@@ -25,7 +25,7 @@ sbatch run_alphafold_cle.sh
 
 ### JupyterHub
 
-The `Singularity` container can also be used within our [Jupyter](https://jupyter.hpcc.ucr.edu) service.
+The `Singularity` container can also be used within our [Jupyter](https://jupyter.hpcc.ucr.edu) service (limited CPU and RAM, and no GPUs).
 
 All that is required is that you download the [kernal.json](kernal.json) file and place it under the following directory:
 
