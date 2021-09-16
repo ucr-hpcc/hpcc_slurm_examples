@@ -1,0 +1,13 @@
+{
+ "language": "python",
+ "argv": ["/opt/linux/centos/7.x/x86_64/pkgs/singularity/3.7.3/bin/singularity",
+   "exec",
+   "/opt/linux/centos/7.x/x86_64/pkgs/alphafold/2.0.0/alphafold.sif",
+   "/opt/conda/bin/python",
+   "-m",
+   "ipykernel",
+   "-f",
+   "{connection_file}"
+ ],
+ "display_name": "AlphaFold (2.0.0)"
+}
