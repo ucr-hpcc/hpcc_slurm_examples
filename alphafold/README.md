@@ -42,11 +42,7 @@ mv kernel.json ~/.local/share/jupyter/kernels/alphafold/kernel.json
 
 ### Jupyter Job
 
-If your job requires heavy resources, or GPUs then you will have to submit your own `Jupyter` notebook server on the cluster:
-    https://github.com/ucr-hpcc/hpcc_slurm_examples/tree/master/jupyter#interactively-as-a-job
-
-Then use an SSH tunnel to access it, like so:
-   https://hpcc.ucr.edu/manuals/hpc_cluster/jobs/#web-browser-access
+If your job requires heavy resources, or GPUs, then you will have to submit your own `Jupyter` notebook server on the cluster ([Jupyter: as a job](https://github.com/ucr-hpcc/hpcc_slurm_examples/tree/master/jupyter#interactively-as-a-job)).
    
 
    
