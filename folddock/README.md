@@ -18,28 +18,28 @@ We recommend running this step on CPU and the actual folding on GPU.
 # Load hhsuite
 module load hhsuite
 
-FASTAFILE=#Path to fasta file of chain \
-UNICLUST30=#Path to Uniclust30 \
-OUTNAME="CHAINID.a3m" \
+FASTAFILE=#Path to fasta file of chain
+UNICLUST30=#Path to Uniclust30
+OUTNAME="CHAINID.a3m"
 hhblits -i $FASTAFILE -d $UNICLUST30 -E 0.001 -all -oa3m $OUTNAME
 ```
 2. Create two input MSAs (paired and fused) from the HHblits results for each chain
 
 **Paired** 
 ```
-A3M1=#Path to a3m from chain 1 (from step 1)\
-A3M2=#Path to a3m from chain 2 (from step 1) \
-MGF=0.9 #The max gap fraction allowed in the sequences \
-OUTNAME="CHAINID1-CHAINID2_paired.a3m" \
+A3M1=#Path to a3m from chain 1 (from step 1)
+A3M2=#Path to a3m from chain 2 (from step 1)
+MGF=0.9 #The max gap fraction allowed in the sequences
+OUTNAME="CHAINID1-CHAINID2_paired.a3m"
 python3 ./data/marks/hhblits/oxmatch.py --a3m1 $A3M1 --a3m2 $A3M2 --max_gap_fraction $MGF --outname $OUTNAME
 ```
 
 **Fused**
 ```
-A3M1=#Path to a3m from chain 1 (from step 1) \
-A3M2=#Path to a3m from chain 2 (from step 1) \
-MGF=0.9 #The max gap fraction allowed in the sequences \
-OUTNAME="CHAINID1-CHAINID2_fused.a3m" \
+A3M1=#Path to a3m from chain 1 (from step 1)
+A3M2=#Path to a3m from chain 2 (from step 1)
+MGF=0.9 #The max gap fraction allowed in the sequences
+OUTNAME="CHAINID1-CHAINID2_fused.a3m"
 python3 ./data/marks/hhblits/fuse_msas.py --a3m1 $A3M1 --a3m2 $A3M2 --max_gap_fraction $MGF --outname $OUTNAME
 ```
 
@@ -47,37 +47,36 @@ python3 ./data/marks/hhblits/fuse_msas.py --a3m1 $A3M1 --a3m2 $A3M2 --max_gap_fr
 
 **Chain Break and Fasta**
 ```
-CB=100 #Get chain break: Length of chain 1 \
-# E.g. seq1='AAA', seq2='BBB', catseq=AAABBB (the sequence that should be in the fasta file) and CB=3 \
+CB=100 #Get chain break: Length of chain 1
+# E.g. seq1='AAA', seq2='BBB', catseq=AAABBB (the sequence that should be in the fasta file) and CB=3
 FASTAFILE=#Path to file with concatenated fasta sequences.
 ```
 
 **MSA paths**
 ```
-PAIREDMSA=#Path to paired MSA \
-FUSEDMSA=#Path to fused MSA \
+PAIREDMSA=#Path to paired MSA
+FUSEDMSA=#Path to fused MSA
 MSAS="$PAIREDMSA,$FUSEDMSA" #Comma separated list of msa paths
 ```
 
 **AF2 CONFIGURATION**
 ```
 # This is inside the folder of FoldDock that you clone in the Installation section
-AFHOME='./Alphafold2/alphafold/' # Path of alphafold directory in FoldDock \
-PARAM=#Path to AF2 params \
+AFHOME='./Alphafold2/alphafold/' # Path of alphafold directory in FoldDock
+PARAM=#Path to AF2 params
 OUTFOLDER=# Path where AF2 generates its output folder structure
 
-PRESET='full_dbs' #Choose preset model configuration - no ensembling (full_dbs) and (reduced_dbs) or 8 model ensemblings (casp14). \
-MAX_RECYCLES=10 #max_recycles (default=3) \
+PRESET='full_dbs' #Choose preset model configuration - no ensembling (full_dbs) and (reduced_dbs) or 8 model ensemblings (casp14).
+MAX_RECYCLES=10 #max_recycles (default=3)
 MODEL_NAME='model_1'
 ```
 
 **Run AF2**
-This step is recommended to run on GPU as the folding will be much more efficient. \
-NOTE! Depending on your structure, large amounts of RAM may be required \
+This step is recommended to run on GPU as the folding will be much more efficient.
+NOTE! Depending on your structure, large amounts of RAM may be required
 The run mode option here is "--fold_only"
 
 ```
-pushd $AFHOME \
 cd $AFHOME
 
 # Load Scratch
@@ -108,5 +107,4 @@ singularity exec --nv --bind ${data_dir} $ALPHAFOLD_SING \
                 --obsolete_pdbs_path='' \
                 --preset=$PRESET \
                 --max_recycles=$MAX_RECYCLES
-popd
 ```
