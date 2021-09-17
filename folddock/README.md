@@ -21,7 +21,7 @@ module load alphafold
 FASTAFILE=#Path to fasta file of chain \
 UNICLUST30=#Path to Uniclust30 \
 OUTNAME="CHAINID.a3m" \
-singularity exec --nv --bind ${data_dir} $ALPHAFOLD_SING hhblits -i $FASTAFILE -d $UNICLUST30 -E 0.001 -all -oa3m $OUTNAME
+singularity exec --nv $ALPHAFOLD_SING hhblits -i $FASTAFILE -d $UNICLUST30 -E 0.001 -all -oa3m $OUTNAME
 ```
 2. Create two input MSAs (paired and fused) from the HHblits results for each chain
 
