@@ -3,7 +3,7 @@
 ## Installation
 You will need to clone the folddock using
 ```
-git clone git@gitlab.com:ElofssonLab/FoldDock.git
+git clone https://gitlab.com/ElofssonLab/FoldDock.git
 ```
 ## Running
 ### Databases and Input information
