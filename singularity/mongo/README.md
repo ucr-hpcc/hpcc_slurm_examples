@@ -1,4 +1,6 @@
-# MongoDB Example
+# MongoDB
+
+## Configure
 
 First load the module:
 
@@ -51,6 +53,8 @@ Then stop mongod service:
 singularity instance stop numactl
 ```
 
+## Within the same job
+
 You can now start it again from within a job, like so:
 
 ```bash
@@ -58,6 +62,10 @@ module load mongo
 cd ~/bigdata/mongo
 singularity instance start -B data:/data/db $MONGO_IMG numactl --interleave=all mongod --auth
 ```
+
+>> NOTE: This does not seem to be working within the latest version of mongo.
+
+## Separate Jobs
 
 Or as a separate job like this:
 

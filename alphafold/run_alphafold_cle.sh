@@ -84,7 +84,7 @@ module load alphafold/2.0.0
 
 # Load scratch
 module load workspace/scratch
-export SINGULARITY_BIND="/scratch:/tmp"
+export SINGULARITY_BIND="${SCRATCH}:/tmp"
 
 # Run alphafold container with nvidia support
 singularity run --bind ${data_dir} --nv $ALPHAFOLD_SING \
