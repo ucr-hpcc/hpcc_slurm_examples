@@ -5,7 +5,10 @@ To submit a job from the cluster, you can use [submission_script.sh](submission_
 
 ## Copy examples
 
-This involved you copying the text inside the [submission_script.sh](submission_script.sh) and pasting it into a file on the cluster.
+You can simple copying the text from [submission_script.sh](submission_script.sh) and pasting it into a file on the cluster via `nano`/`vim`.
+
+Or you can use the `wget` command to transfer the file from this repo to the cluster directly:
+
 1. [Login to the cluster](https://hpcc.ucr.edu/manuals_linux-basics_intro#how-to-get-access)
 2. Once logged in you can run
 ```bash
