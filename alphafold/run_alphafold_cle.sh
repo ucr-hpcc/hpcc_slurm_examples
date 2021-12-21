@@ -80,7 +80,7 @@ uniref90_database_path=$data_dir/uniref90/uniref90.fasta
 #kalign_binary_path=$(which kalign)
 
 # Load alphafold
-module load alphafold/2.0.0 
+module load alphafold/2.1.1
 
 # Load scratch
 module load workspace/scratch
