@@ -43,7 +43,7 @@ SSH port: 22
 #conda activate jupyter
 #OR
 # Load the pre installed system version
-module load jupyter
+module load jupyterlab
 
 # Print instructions to user
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"
