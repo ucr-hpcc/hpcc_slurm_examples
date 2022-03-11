@@ -22,14 +22,14 @@ cluster=$(hostname -f | awk -F"." '{print $2}')
 # Print tunneling instructions jupyter-log
 echo -e "
 MacOS or linux terminal command to create your ssh tunnel:
-ssh -NL ${port}:${node}:${port} ${user}@cluster.hpcc.ucr.edu
+ssh -NL ${port}:${node}:${port} ${user}@secure.hpcc.ucr.edu
 
 MS Windows MobaXterm info:
 
 Forwarded port:same as remote port
 Remote server: ${node}
 Remote port: ${port}
-SSH server: cluster.hpcc.ucr.edu
+SSH server: secure.hpcc.ucr.edu
 SSH login: $user
 SSH port: 22
 "
