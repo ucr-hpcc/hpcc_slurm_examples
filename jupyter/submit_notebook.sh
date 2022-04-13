@@ -8,10 +8,8 @@
 #SBATCH --output=jupyter-notebook-%J.log
 
 # Load and activate jupyter conda environment
-module unload anaconda3
 module load miniconda3
-conda activate jupyter
-
+conda activate jupyterlab
 
 # Execute the notebook and generate HTML (notebook.html) as output file
 jupyter nbconvert --to html --execute notebook.ipynb
