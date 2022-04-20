@@ -22,14 +22,14 @@ cluster=$(hostname -f | awk -F"." '{print $2}')
 # Print tunneling instructions jupyter-log
 echo -e "
 MacOS or linux terminal command to create your ssh tunnel:
-ssh -NL ${port}:${node}:${port} ${user}@cluster.hpcc.ucr.edu
+ssh -NL ${port}:${node}:${port} ${user}@secure.hpcc.ucr.edu
 
 MS Windows MobaXterm info:
 
 Forwarded port:same as remote port
 Remote server: ${node}
 Remote port: ${port}
-SSH server: cluster.hpcc.ucr.edu
+SSH server: secure.hpcc.ucr.edu
 SSH login: $user
 SSH port: 22
 "
@@ -37,9 +37,13 @@ SSH port: 22
 ####################################################
 # Load modules or activate conda environments here #
 ####################################################
-module unload miniconda2
-module load miniconda3
-conda activate jupyter
+
+# You can activate your own conda env with Jupyter
+#module load miniconda3
+#conda activate jupyter
+#OR
+# Load the pre installed system version
+module load jupyterlab
 
 # Print instructions to user
 echo -e "PLEASE USE GENERATED URL BELOW IN BROWSER\nYOU MUST REPLACE '${node}' with 'localhost'"

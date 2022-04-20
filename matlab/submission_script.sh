@@ -5,8 +5,8 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
 #SBATCH --time=2:00:00
-#SBATCH --mail-user=youremail@address.com
-#SBATCH --mail-type=ALL
+##SBATCH --mail-user=youremail@address.com
+##SBATCH --mail-type=ALL
 #SBATCH --job-name="just_a_test"
 #SBATCH -p short # This is the default partition, you can use any of the following; intel, batch, highmem, gpu
 
