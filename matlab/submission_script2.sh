@@ -6,8 +6,8 @@
 #SBATCH --mem-per-cpu=100G
 #SBATCH --time=5-00:00:00     # 5 day and 00 minutes
 #SBATCH --output=my.stdout
-#SBATCH --mail-user=hosseint@ucr.edu
-#SBATCH --mail-type=ALL
+##SBATCH --mail-user=youremail@address.com
+##SBATCH --mail-type=ALL
 #SBATCH --job-name="HT_QOptica_1e3"
 #SBATCH -p intel # This is the default partition, you can use any of the following; intel, batch, highmem, gpu
 
