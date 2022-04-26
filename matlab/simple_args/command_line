@@ -1,1 +1,1 @@
-sbatch --export=var1="SomeValue" job_script.sh
+sbatch job_script.sh 45 90

@@ -3,5 +3,5 @@
 
 module load matlab
 
-matlab -nodisplay -nodesktop -r 'var1="'$var1'"' < matlabCode.m
+matlab -nodisplay -nodesktop -r "var1=$1;var2=$2" < matlabCode.m
 
