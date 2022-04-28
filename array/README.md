@@ -24,5 +24,5 @@ This will only allow 2 out of 10 tasks to run at the same time.
 
 # Examples
 
-Here is an example of a [test_job.sh]('test_job.sh') submission script and an [inputs.txt]('inputs.txt') file to demonstrate how the `{SLURM_ARRAY_TASK_ID}` environment variable can be used to pull the correct input.
+Here is an example of a [test_job.sh](test_job.sh) submission script and an [inputs.txt](inputs.txt) file to demonstrate how the `{SLURM_ARRAY_TASK_ID}` environment variable can be used to pull the correct input.
 
