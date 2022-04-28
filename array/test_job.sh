@@ -9,4 +9,9 @@
 ##SBATCH --job-name="just_a_test"
 
 echo "Processing task ${SLURM_ARRAY_TASK_ID}"
-sed -n "${SLURM_ARRAY_TASK_ID}p" inputs.txt
+
+# Get input value from file
+input=$(sed -n "${SLURM_ARRAY_TASK_ID}p" inputs.txt)
+
+# Run a command with input, replace "echo" with real command
+echo $input
