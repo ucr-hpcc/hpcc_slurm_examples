@@ -8,7 +8,5 @@
 ##SBATCH --mail-type=ALL
 ##SBATCH --job-name="just_a_test"
 
-date
-echo "${SLURM_ARRAY_JOB_ID}[${SLURM_ARRAY_TASK_ID}]"
-sleep 60
-hostname
+echo "Processing task ${SLURM_ARRAY_TASK_ID}"
+sed -n "${SLURM_ARRAY_TASK_ID}p" inputs.txt
