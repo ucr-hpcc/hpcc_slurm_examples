@@ -78,8 +78,11 @@ exec "mysqld_safe"
 EOF
 
 # Build singularity image
+OLD_SINGULARITY_BINDPATH=$SINGULARITY_BINDPATH
+unset SINGULARITY_BINDPATH
 singularity build --remote mariadb.sif mariadb.def
-
+SINGULARITY_BINDPATH=$OLD_SINGULARITY_BINDPATH
+unset OLD_SINGULARITY_BINDPATH
 # Create directory where db files live
 mkdir db
 
