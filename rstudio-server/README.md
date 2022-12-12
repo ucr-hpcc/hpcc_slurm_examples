@@ -17,8 +17,8 @@ Then load the latest versions of `R` and `RStudio Server` from module system:
 
 ```bash
 module unload R
-module load R/4.1.1_gcc-8.3.0 # Or latest version
-module load rstudio-server/2021.09.1-372 # Or latest version
+module load R/4.1.2 # Or latest version
+module load rstudio-server/2022.02.0-443 # Or latest version
 ```
 
 Lastly, start the RStudio Server by running the launcher script:
@@ -32,7 +32,7 @@ start-rserver.sh
 Alternativly as you can start an RStudio Server under a non-interactive job, like so:
 
 ```bash
-sbatch -p short -c 4 --time=2:00:00 --mem=10g --wrap='module unload R; module load R/4.1.1_gcc-8.3.0; module load rstudio-server/2021.09.1-372; start-rserver.sh' --output='rstudio-%J.out'
+sbatch -p short -c 4 --time=2:00:00 --mem=10g --wrap='module unload R; module load R/4.1.2; module load rstudio-server/2022.02.0-443; start-rserver.sh' --output='rstudio-%J.out'
 ```
 
 These are minimal resources, for only 2 hours, so you may need to adjust them.
