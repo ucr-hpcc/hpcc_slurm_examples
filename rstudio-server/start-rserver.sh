@@ -2,6 +2,7 @@
 
 # Load rstudio-server
 module load rstudio-server
+module load miniconda3
 
 # Get script directory and go there
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
