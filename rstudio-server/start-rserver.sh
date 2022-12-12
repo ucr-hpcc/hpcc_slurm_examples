@@ -2,7 +2,6 @@
 
 # Load rstudio-server
 module load rstudio-server
-module load miniconda3
 
 # Get script directory and go there
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
@@ -17,7 +16,7 @@ mkdir -p $(dirname $COOKIE_KEY_PATH)
 uuid > $COOKIE_KEY_PATH
 chmod 600 $COOKIE_KEY_PATH
 
-export RETICULATE_PYTHON=$(which python)
+export RETICULATE_PYTHON=$(which python3)
 
 # Generate password
 export RSTUDIO_PASSWORD=$(date +%s | sha256sum | base64 | head -c 16 ; echo)
