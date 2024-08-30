@@ -8,7 +8,7 @@
 #SBATCH --mail-user=useremail@address.com
 #SBATCH --mail-type=ALL
 #SBATCH --job-name="just_a_test"
-#SBATCH -p intel # This is the default partition, you can use any of the following; intel, batch, highmem, gpu
+#SBATCH -p epyc # You can use any of the following; epyc, intel, batch, highmem, gpu
 
 # Unset this variable, since Abaqus errors when it is set
 export SLURM_GTIDS=

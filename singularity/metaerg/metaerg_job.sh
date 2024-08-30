@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH -p intel,batch
+#SBATCH -p epyc
 #SBATCH --mem-per-cpu=8G
 #SBATCH --time=1-00:15:00     # 1 Day and 15 minutes
 ##SBATCH --mail-user=emailaddress@mail.com

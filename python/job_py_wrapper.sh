@@ -8,7 +8,7 @@
 #SBATCH --mail-user=useremail@address.com
 #SBATCH --mail-type=ALL
 #SBATCH --job-name="Python Example"
-#SBATCH -p intel              # This is the default partition, you can use any of the following; intel, batch, highmem, gpu
+#SBATCH -p epyc  # You can use any of the following; epyc, intel, batch, highmem, gpu
 
 # A version of Python from miniconda2 is loaded by default
 # However, if you want to use a diferent version, then do so here

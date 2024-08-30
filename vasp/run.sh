@@ -8,7 +8,7 @@
 ##SBATCH --mail-type=ALL
 #SBATCH --time=7-00:00:00
 #SBATCH --job-name="vasp"
-#SBATCH -p intel
+#SBATCH -p epyc
 
 module -s load vasp/5.4.1_oneapi-2022.1.2.146
 export OMP_NUM_THREADS=1

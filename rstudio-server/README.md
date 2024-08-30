@@ -49,7 +49,7 @@ If you want to modify the RStudio Server launch script, you can download a copy 
 Request resource on a compute node:
 
 ```bash
-srun -p batch --time=8:00:00 --mem=10gb --cpus-per-task=1 --pty bash -l
+srun -p epyc --time=8:00:00 --mem=10gb --cpus-per-task=1 --pty bash -l
 ```
 
 Download startup script:

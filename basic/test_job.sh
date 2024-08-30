@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH -p short,batch
+#SBATCH -p epyc
 #SBATCH --mem-per-cpu=1G
 #SBATCH --time=0-00:15:00     # 15 minutes
 ##SBATCH --mail-user=email@address.com

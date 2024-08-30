@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -p batch,intel
+#SBATCH -p epyc
 #SBATCH --time=7-00:00:00
 #SBATCH -c 2
 #SBATCH --mem=10g

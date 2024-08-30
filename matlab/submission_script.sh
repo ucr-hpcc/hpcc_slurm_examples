@@ -8,7 +8,7 @@
 ##SBATCH --mail-user=youremail@address.com
 ##SBATCH --mail-type=ALL
 #SBATCH --job-name="just_a_test"
-#SBATCH -p short # This is the default partition, you can use any of the following; intel, batch, highmem, gpu
+#SBATCH -p short # You can use any of the following; epyc, intel, batch, highmem, gpu
 
 
 # Load matlab

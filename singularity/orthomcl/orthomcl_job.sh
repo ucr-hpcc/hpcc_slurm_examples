@@ -7,7 +7,7 @@
 #SBATCH --mail-user=useremail@address.com
 #SBATCH --time=4:00:00
 #SBATCH --job-name=orthomcl
-#SBATCH -p intel
+#SBATCH -p epyc
 
 module load singularity
 module load orthomcl
